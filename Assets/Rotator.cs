@@ -28,7 +28,7 @@ private bool rotate;
         }
     }
 
-    // Update is called once per interval
+    // Update is called once per interval every time
     void FixedUpdate()
 {
     if (rotate)
