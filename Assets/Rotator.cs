@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Rotator : MonoBehaviour
+
+
  { 
 
 public float rotationSpeed = 0.3f;
+
+public PickerUpper player;
 
 private bool rotate;
 
@@ -31,10 +35,19 @@ private bool rotate;
     // Update is called once per interval every time
     void FixedUpdate()
 {
-    if (rotate)
-    {
-        this.GetComponent<Transform>().Rotate(0, 0.3f, 0);
-    }
+        if (player != null)
+        {
+            if (rotate && player.count >= 3)
+            {
+                this.GetComponent<Transform>().Rotate(0, 0.3f, 0);
+            }
+            else
+            {
+                this.GetComponent<Transform>().Rotate(0, 0.6f, 0);
+            }
+
+        }
+    
 }
 
 }
