@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - PickUp
+  - PickUp2
+  - PickUp1
+  - PickUp3
+  - PickUp4
+  - PickUp5
+  - Cube1
   layers:
   - Default
   - TransparentFX

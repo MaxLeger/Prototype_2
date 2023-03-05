@@ -16,6 +16,6 @@ public class PickUpUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<TextMeshProUGUI>().text = "Pickup count: " + player.count;
+        this.GetComponent<TextMeshProUGUI>().text = "G:" + player.count;
     }
 }
