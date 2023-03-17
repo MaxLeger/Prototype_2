@@ -15,7 +15,7 @@ public class Currency : MonoBehaviour
     }
     void Update()
     {
-        currencyUI.GetComponent<Text>().text = gold.ToString();
+        currencyUI.GetComponent<Text>().text = "G: " + gold.ToString();
         if (gold < 0)
         {
             gold = 0;
