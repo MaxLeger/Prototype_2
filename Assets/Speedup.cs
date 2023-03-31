@@ -15,7 +15,7 @@ public class Speedup : MonoBehaviour
 
     Bullets bullets;
 
-    AddonProjectiles addon;
+    public AddonProjectiles addon;
 
 
     public int cost;

@@ -8,20 +8,30 @@ public class BasicEnemy : MonoBehaviour
 
     public int addAmount;
 
+    public HealthBar healthBar;
+
     [Header("Stats")]
-    public int health;
+    public int maxHealth;
+    public int currentHealth;
+
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
 
-        if (health <= 0)
+
+        if (currentHealth <= 0)
             DestroyEnemy();
     }
 
     void Start()
     {
         script = GameObject.FindWithTag("GameController").GetComponent<Currency>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        
+
     }
 
     public void DestroyEnemy()
